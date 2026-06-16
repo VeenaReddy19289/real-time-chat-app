@@ -1,35 +1,113 @@
-.chat-box {
-  height: 500px;
-  overflow-y: auto;
-  padding: 20px;
-  background: #ece5dd;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
 }
 
-.message {
-  max-width: 70%;
-  padding: 10px 14px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  background: white;
-  width: fit-content;
+body{
+  background:#0f172a;
 }
 
-.my-message {
-  margin-left: auto;
-  background: #dcf8c6;
+.chat-container{
+  width:100%;
+  max-width:1000px;
+  height:95vh;
+  margin:20px auto;
+  display:flex;
+  flex-direction:column;
+  background:#ffffff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.3);
 }
 
-.message strong {
-  display: block;
-  margin-bottom: 4px;
+.chat-header{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  padding:20px;
+  text-align:center;
 }
 
-.message small {
-  font-size: 11px;
-  opacity: 0.7;
+.chat-header h2{
+  font-size:28px;
 }
-.chat-header p {
-  margin-top: 5px;
-  opacity: 0.8;
-  font-size: 14px;
+
+.chat-box{
+  flex:1;
+  overflow-y:auto;
+  padding:20px;
+  background:#f1f5f9;
+}
+
+.message{
+  max-width:70%;
+  margin-bottom:15px;
+  padding:12px;
+  border-radius:15px;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.my-message{
+  margin-left:auto;
+  background:#dbeafe;
+}
+
+.message strong{
+  color:#2563eb;
+  display:block;
+  margin-bottom:4px;
+}
+
+.message p{
+  margin:5px 0;
+}
+
+.message small{
+  color:gray;
+  font-size:11px;
+}
+
+.input-section{
+  padding:15px;
+  background:white;
+  border-top:1px solid #e5e7eb;
+}
+
+.input-section input{
+  width:100%;
+  padding:12px;
+  margin-bottom:10px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.btn-group{
+  display:flex;
+  gap:10px;
+}
+
+.btn-group button{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:15px;
+  color:white;
+  transition:.3s;
+}
+
+.btn-group button:first-child{
+  background:#7c3aed;
+}
+
+.btn-group button:last-child{
+  background:#2563eb;
+}
+
+.btn-group button:hover{
+  transform:translateY(-2px);
 }
