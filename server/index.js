@@ -34,15 +34,15 @@ io.on("connection", (socket) => {
     if (currentRoom) {
       socket.leave(currentRoom);
     }
-
+console.log("🚀 Joined room:", room);
     currentRoom = room;
     socket.join(room);
 
     console.log(`${socket.id} joined ${room}`);
   });
 
-  socket.on("send_message", async (data) => {
-
+  socket.on("send_message", (data) => {
+console.log("📩 Message:", data);
   //await Message.create({
     //username: data.username,
     //room: data.room,
