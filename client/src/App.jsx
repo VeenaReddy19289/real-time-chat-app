@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef} from "react";
 import io from "socket.io-client";
 import "./App.css";
-const socket = io("http://localhost:3001");
+const socket = io("https://real-time-chat-app-9qdg.onrender.com/");
 
 function App() {
   const [message, setMessage] = useState("");
@@ -74,8 +74,9 @@ useEffect(() => {
   <div className="chat-container">
 
   <div className="chat-header">
-    <h2>💬 Real-Time Chat App</h2>
-  </div>
+  <h2>ChatSphere</h2>
+  <p>Real-Time Messaging Platform</p>
+</div>
 
   <div className="chat-box">
   {chat.map((msg, i) => (
@@ -92,7 +93,6 @@ useEffect(() => {
       <small>{msg.time}</small>
     </div>
   ))}
-
   <div ref={chatEndRef}></div>
 </div>
 
